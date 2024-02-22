@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>VUE APP</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{title}}</h2>
+        <a v-bind:href="home">Home</a><br>
+        <img v-bind:src="imageSrc" alt="Product Image">
+        <img v-bind:src="imageSrc1" alt="Product Image">
+        <h2 v-bind:class="style1">welcome to HAIP</h2>
+        
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const m=Vue.createApp({
+            data(){
+                return{
+                    imageSrc:'house.jpg',
+                    imageSrc1:'D:\house2.jpg',
+                    title:'VUE APP',
+                    style1:'welcome',
+                    home:'index.html'
+
+
+                }
+            }
+        });
+
+        m.mount('#app');
+    </script>
+    <style>
+        .welcome{
+            color:brown;
+        }
+    </style>
+</body>
+</html>

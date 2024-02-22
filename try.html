@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>VUE APP</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="type>18">is old</p>
+        <p v-else-if="type<18">is young</p>
+        <p v-else>Type other</p>
+
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const m=Vue.createApp({
+            data(){
+                return{
+                   
+                    type: 14
+                }
+            }
+        });
+
+        m.mount('#app');
+    </script>
+    
+   
+</body>
+</html>
